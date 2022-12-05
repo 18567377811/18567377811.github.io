@@ -16,7 +16,6 @@ const router = createRouter({
     {
       path: "/select",
       component: () => import("../components/Select.vue"),
-      children: [{}],
     },
     {
       path: "/My",
