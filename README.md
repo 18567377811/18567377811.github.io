@@ -4,5 +4,6 @@
 - 准备自己的npm i 以及编写自己的代码
 - 编写完成在自己分支上git add git commit
 - 如果要推送仓库 git checkout master切回主分支
+- git pull origin master 领取最新代码
 - 合并git merge 自己分支名
 - 直接git push
