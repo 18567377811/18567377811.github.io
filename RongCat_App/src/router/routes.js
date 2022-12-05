@@ -5,20 +5,20 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {
-      path: '/',
-      component: () => import('../components/Home.vue'),
-      children: [
-        {}
-      ]
+      path: "/",
+      component: () => import("../components/Home.vue"),
+      children: [{}],
     },
     {
-      path: '/My',
-      component: () => import('../components/My.vue'),
-      children: [
-        {}
-      ]
-    }
-  ]
-})
+      path: "/select",
+      component: () => import("../components/Select.vue"),
+    },
+    {
+      path: "/My",
+      component: () => import("../components/My.vue"),
+      children: [{}],
+    },
+  ],
+});
 
 export default router;
