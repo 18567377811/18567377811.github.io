@@ -5,9 +5,13 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {
-      path: "/",
+      path: '/',
       component: () => import("../components/Home.vue"),
-      children: [{}],
+      children: [{
+        path: '/Recmd',
+        component: () => import('../components/Home/Recmd.vue')
+      }
+      ],
     },
     {
       path: "/select",
@@ -16,7 +20,6 @@ const router = createRouter({
     {
       path: "/My",
       component: () => import("../components/My.vue"),
-      children: [{}],
     },
   ],
 });
