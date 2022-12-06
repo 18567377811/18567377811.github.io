@@ -1,21 +1,38 @@
 <template>
   <div class="select">
     <div class="header">
-      <h1>严选</h1>
+      <!-- <h1>严选</h1> -->
       <div class="nav">
-        <span>北京</span>
+        <span class="city"
+          >{{ city }} <img src="../assets/city.png" alt=""
+        /></span>
         <div class="search">
           <div class="space"></div>
           <input type="text" placeholder="请输入你想要的内容" />
           <button></button>
         </div>
-        <span>通知</span>
+        <span class="notice"><img src="../assets/notice.png" alt="" /></span>
       </div>
+      <div class="navspace"></div>
       <div class="items">
-        <div class="item" v-for="item in 10">
-          <div class="img"></div>
-          <span>面部轮廓</span>
-        </div>
+        <swipe class="my-swipe" indicator-color="white">
+          <swipe-item>
+            <div class="items">
+              <div class="item" v-for="item in 10">
+                <div class="img"></div>
+                <span>面部轮廓</span>
+              </div>
+            </div>
+          </swipe-item>
+          <swipe-item>
+            <div class="items">
+              <div class="item" v-for="item in 10">
+                <div class="img"></div>
+                <span>补水美白</span>
+              </div>
+            </div>
+          </swipe-item>
+        </swipe>
       </div>
     </div>
     <div class="lists">
@@ -27,9 +44,56 @@
         <div class="list">甄选榜</div>
       </div>
     </div>
+    <div class="tab">
+      <tabs v-model:active="active">
+        <tab title="医院">
+          <dropdown-menu>
+            <dropdown-item v-model="value1" :options="option1" />
+            <dropdown-item
+              v-model="value2"
+              :options="option2"
+            /> </dropdown-menu
+          >医院</tab
+        >
+        <tab title="商品">
+          <dropdown-menu>
+            <dropdown-item v-model="value1" :options="option1" />
+            <dropdown-item
+              v-model="value2"
+              :options="option2"
+            /> </dropdown-menu
+          >商品</tab
+        >
+        <tab title="医生">
+          <dropdown-menu>
+            <dropdown-item v-model="value1" :options="option1" />
+            <dropdown-item
+              v-model="value2"
+              :options="option2"
+            /> </dropdown-menu
+          >医生</tab
+        >
+      </tabs>
+    </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import { Swipe, SwipeItem, Tab, Tabs, DropdownMenu, DropdownItem } from "vant";
+import { ref } from "vue";
+let city = ref("北京");
+const value1 = ref(0);
+const value2 = ref("a");
+const option1 = [
+  { text: "全部项目", value: 0 },
+  { text: "新款项目", value: 1 },
+  { text: "活动项目", value: 2 },
+];
+const option2 = [
+  { text: "默认排序", value: "a" },
+  { text: "好评排序", value: "b" },
+  { text: "销量排序", value: "c" },
+];
+</script>
 <style scoped>
 * {
   margin: 0;
@@ -37,12 +101,41 @@
 }
 .select {
   background-color: #fafafa;
-  height: 100vh;
+  height: 2000px;
 }
 .nav {
+  background-color: #9bf3f9;
+  position: fixed;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   line-height: 30px;
+  width: 100%;
+  padding: 10px 0px;
+  /* margin-top: 10px; */
+  z-index: 10;
+}
+.city {
+  display: flex;
+  align-items: center;
+  margin-left: -20px;
+  margin-right: 10px;
+}
+.city img {
+  width: 6px;
+  height: 4px;
+}
+.notice {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: -20px;
+}
+.notice img {
+  width: 16px;
+  height: 19px;
+}
+.navspace {
+  height: 45px;
 }
 input {
   outline: none;
@@ -138,5 +231,19 @@ input {
 .flex .list {
   width: 110px;
   background-color: bisque;
+}
+.my-swipe .van-swipe-item {
+  width: 100%;
+  /* color: #fff; */
+  font-size: 20px;
+  line-height: 150px;
+  text-align: center;
+  margin-top: -24px;
+  /* background-color: #39a9ed; */
+}
+.tab {
+  border-radius: 10px;
+  margin-top: 16px;
+  overflow: hidden;
 }
 </style>
