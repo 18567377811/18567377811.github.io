@@ -21,6 +21,30 @@ const router = createRouter({
       path: "/My",
       component: () => import("../components/My.vue"),
     },
+    //榜单路由搭建开始
+    {
+      path: "/List",
+      component: () => import("../components/List.vue"),
+      children: [
+        {
+          path: '',
+          component: () => import("../components/List/List_Collect.vue"),
+        },
+        {
+          path: 'Popularity',
+          component: () => import("../components/List/List_Popularity.vue"),
+        },
+        {
+          path: 'Organization',
+          component: () => import("../components/List/List_Organization.vue"),
+        },
+        {
+          path: 'GoodDoctor',
+          component: () => import("../components/List/List_GoodDoctor.vue"),
+        }
+      ]
+    }
+    //榜单路由搭建结束
   ],
 });
 
