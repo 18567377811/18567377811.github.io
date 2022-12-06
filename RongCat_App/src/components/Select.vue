@@ -18,9 +18,61 @@
         <swipe class="my-swipe" indicator-color="white">
           <swipe-item>
             <div class="items">
-              <div class="item" v-for="item in 10">
-                <div class="img"></div>
+              <div class="item">
+                <div class="img">
+                  <img src="../assets/mianbulunkuo.png" alt="" />
+                </div>
                 <span>面部轮廓</span>
+              </div>
+              <div class="item">
+                <div class="img"><img src="../assets/bibu.png" alt="" /></div>
+                <span>鼻部</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="../assets/jinzhisuxing.png" alt="" />
+                </div>
+                <span>紧致塑形</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="../assets/poniaosuan.png" alt="" />
+                </div>
+                <span>玻尿酸</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="../assets/meitisuxing.png" alt="" />
+                </div>
+                <span>美体塑形</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="../assets/bushuimeibai.png" alt="" />
+                </div>
+                <span>补水美白</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="../assets/xiongbu.png" alt="" />
+                </div>
+                <span>胸部</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="../assets/chuzhoushoulian.png" alt="" />
+                </div>
+                <span>除皱瘦脸</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="../assets/zitizhifang.png" alt="" />
+                </div>
+                <span>自体脂肪</span>
+              </div>
+              <div class="item">
+                <div class="img"><img src="../assets/yanbu.png" alt="" /></div>
+                <span>眼部</span>
               </div>
             </div>
           </swipe-item>
