@@ -1,6 +1,5 @@
 <template>
   <div>
-    circle
     <!-- 导航栏 -->
     <div class="Circle_Nav">
       <div class="Circle_Nav_title">
