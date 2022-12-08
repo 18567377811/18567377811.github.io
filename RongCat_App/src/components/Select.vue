@@ -4,14 +4,16 @@
       <!-- <h1>严选</h1> -->
       <div class="nav">
         <span class="city"
-          >{{ city }} <img src="../assets/city.png" alt=""
+          >{{ city }} <img src="../selectImages/city.png" alt=""
         /></span>
         <div class="search">
           <div class="space"></div>
           <input type="text" placeholder="请输入你想要的内容" />
           <button></button>
         </div>
-        <span class="notice"><img src="../assets/notice.png" alt="" /></span>
+        <span class="notice"
+          ><img src="../selectImages/notice.png" alt=""
+        /></span>
       </div>
       <div class="navspace"></div>
       <div class="items">
@@ -20,58 +22,62 @@
             <div class="items">
               <div class="item">
                 <div class="img">
-                  <img src="../assets/mianbulunkuo.png" alt="" />
+                  <img src="../selectImages/mianbulunkuo.png" alt="" />
                 </div>
                 <span>面部轮廓</span>
               </div>
               <div class="item">
-                <div class="img"><img src="../assets/bibu.png" alt="" /></div>
+                <div class="img">
+                  <img src="../selectImages/bibu.png" alt="" />
+                </div>
                 <span>鼻部</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../assets/jinzhisuxing.png" alt="" />
+                  <img src="../selectImages/jinzhisuxing.png" alt="" />
                 </div>
                 <span>紧致塑形</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../assets/poniaosuan.png" alt="" />
+                  <img src="../selectImages/poniaosuan.png" alt="" />
                 </div>
                 <span>玻尿酸</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../assets/meitisuxing.png" alt="" />
+                  <img src="../selectImages/meitisuxing.png" alt="" />
                 </div>
                 <span>美体塑形</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../assets/bushuimeibai.png" alt="" />
+                  <img src="../selectImages/bushuimeibai.png" alt="" />
                 </div>
                 <span>补水美白</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../assets/xiongbu.png" alt="" />
+                  <img src="../selectImages/xiongbu.png" alt="" />
                 </div>
                 <span>胸部</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../assets/chuzhoushoulian.png" alt="" />
+                  <img src="../selectImages/chuzhoushoulian.png" alt="" />
                 </div>
                 <span>除皱瘦脸</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../assets/zitizhifang.png" alt="" />
+                  <img src="../selectImages/zitizhifang.png" alt="" />
                 </div>
                 <span>自体脂肪</span>
               </div>
               <div class="item">
-                <div class="img"><img src="../assets/yanbu.png" alt="" /></div>
+                <div class="img">
+                  <img src="../selectImages/yanbu.png" alt="" />
+                </div>
                 <span>眼部</span>
               </div>
             </div>
@@ -89,11 +95,11 @@
     </div>
     <div class="lists">
       <h3>品质榜单</h3>
-      <div class="highlist">高精尖榜单</div>
+      <div class="highlist"></div>
       <div class="flex">
-        <div class="list">好医榜</div>
-        <div class="list">机构榜</div>
-        <div class="list">甄选榜</div>
+        <div class="list doctor"></div>
+        <div class="list oran"></div>
+        <div class="list choose"></div>
       </div>
     </div>
     <div class="tab">
@@ -101,12 +107,26 @@
         <tab title="医院">
           <dropdown-menu>
             <dropdown-item v-model="value1" :options="option1" />
-            <dropdown-item
-              v-model="value2"
-              :options="option2"
-            /> </dropdown-menu
-          >医院</tab
-        >
+            <dropdown-item v-model="value2" :options="option2" />
+          </dropdown-menu>
+          <div class="hos-item1">
+            <img src="../selectImages/beijinghuayue.png" alt="" />
+            <h3>北京华悦府医疗美容</h3>
+            <span>0日记|250预约</span>
+            <div class="span">
+              <span>认证</span>
+              <span>可分期</span>
+              <span>免费咨询</span>
+            </div>
+            <div class="huayue">
+              <img src="../selectImages/huayue1.png" alt="" />
+              <img src="../selectImages/huayue2.png" alt="" />
+              <img src="../selectImages/huayue3.png" alt="" />
+            </div>
+          </div>
+          <div class="hos-item2"></div>
+          <div class="hos-item3"></div>
+        </tab>
         <tab title="商品">
           <dropdown-menu>
             <dropdown-item v-model="value1" :options="option1" />
@@ -199,7 +219,7 @@ input {
   height: 30px;
 }
 .header {
-  background: url(../assets/slow.png) 100%;
+  background: url(../selectImages/slow.png) 100%;
   background-size: auto 307px;
   height: 307px;
 }
@@ -212,7 +232,7 @@ input {
 }
 .search button {
   background-color: white;
-  background: url(../assets/search.png) no-repeat center;
+  background: url(../selectImages/search.png) no-repeat center;
   background-size: 15px 15px;
   border: none;
   width: 14px;
@@ -229,6 +249,7 @@ input {
   justify-content: space-around;
   /* align-items: flex-start; */
   padding-top: 10px;
+  overflow: hidden;
 }
 .space {
   width: 16px;
@@ -260,18 +281,25 @@ input {
   height: 293px;
 }
 .lists h3 {
-  font-size: 14px;
+  width: 64px;
+  height: 22px;
+  font-size: 16px;
+  margin-left: 12px;
   font-family: PingFang SC-Bold, PingFang SC;
   font-weight: bold;
-  height: 22px;
-  margin: 0 13px;
+  color: #333333;
+  line-height: 22px;
 }
 .highlist {
   width: 350px;
-  height: 87px;
+  height: 110px;
   margin: 0 auto;
-  margin-top: 25px;
+  border-radius: 8px;
+  overflow: hidden;
+  /* margin-top: -6px; */
   background-color: aquamarine;
+  background: url(../selectImages/highlist.png) no-repeat;
+  background-size: 350px 110px;
 }
 .flex {
   width: 350px;
@@ -283,6 +311,24 @@ input {
 .flex .list {
   width: 110px;
   background-color: bisque;
+}
+.doctor {
+  border-radius: 8px;
+  overflow: hidden;
+  background: url(../selectImages/doctorlist.png) no-repeat;
+  background-size: 110px 120px;
+}
+.oran {
+  border-radius: 8px;
+  overflow: hidden;
+  background: url(../selectImages/oran.png) no-repeat;
+  background-size: 110px 120px;
+}
+.choose {
+  border-radius: 8px;
+  overflow: hidden;
+  background: url(../selectImages/choose.png) no-repeat;
+  background-size: 110px 120px;
 }
 .my-swipe .van-swipe-item {
   width: 100%;
@@ -297,5 +343,111 @@ input {
   border-radius: 10px;
   margin-top: 16px;
   overflow: hidden;
+}
+.hos-item1 {
+  width: 349px;
+  height: 272px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 239, 221, 0.88) 0%,
+    #fefdf9 43%,
+    #ffffff 84%
+  );
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.04),
+    1px 0px 6px 0px rgba(0, 0, 0, 0.04), -1px 4px 6px 0px rgba(0, 0, 0, 0.04);
+  border-radius: 8px 8px 8px 8px;
+  opacity: 1;
+  margin: 16px auto;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hos-item1 img {
+  width: 60px;
+  height: 60px;
+  margin-top: 16px;
+  margin-bottom: 13px;
+}
+.hos-item1 h3 {
+  width: 144px;
+  height: 22px;
+  font-size: 16px;
+  font-family: PingFang SC-Bold, PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  line-height: 22px;
+  /* -webkit-background-clip: text;
+-webkit-text-fill-color: transparent; */
+}
+.hos-item1 span {
+  /* width: 40px; */
+  height: 10px;
+  font-size: 11px;
+  font-family: DIN-Regular, DIN;
+  font-weight: 400;
+  color: #72727a;
+  line-height: 22px;
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+.span {
+  display: flex;
+}
+.hos-item1 .span span {
+  display: block;
+  background: linear-gradient(176deg, #6efff6 0%, #5ee2f3 50%, #1ab3f5 92%);
+  box-shadow: 0px 2px 4px 0px rgba(30, 185, 204, 0.3);
+  border-radius: 6px 6px 6px 6px;
+  /* width: 21px; */
+  height: 16px;
+  font-size: 10px;
+  font-family: PingFang SC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 16px;
+  margin: 11px 6px;
+  padding: 0 8px;
+  text-align: center;
+
+  opacity: 1;
+}
+.huayue {
+  display: flex;
+}
+.hos-item1 .huayue img {
+  width: 95px;
+  height: 73px;
+}
+.hos-item2 {
+  width: 349px;
+  height: 272px;
+  background: linear-gradient(
+    180deg,
+    rgba(245, 233, 251, 0.83) 0%,
+    #f9fcfe 43%,
+    #ffffff 84%,
+    #ffffff 100%
+  );
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.04),
+    1px 0px 4px 0px rgba(0, 0, 0, 0.02), -1px 4px 4px 0px rgba(0, 0, 0, 0.04);
+  border-radius: 8px 8px 8px 8px;
+  opacity: 1;
+  margin: 16px auto;
+}
+.hos-item3 {
+  width: 349px;
+  height: 273px;
+  background: linear-gradient(
+    180deg,
+    rgba(253, 239, 239, 0.83) 0%,
+    #fefaf9 43%,
+    #ffffff 84%
+  );
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.04),
+    1px 0px 6px 0px rgba(0, 0, 0, 0.04), -1px 4px 6px 0px rgba(0, 0, 0, 0.04);
+  border-radius: 8px 8px 8px 8px;
+  opacity: 1;
+  margin: 0 16px auto;
 }
 </style>
