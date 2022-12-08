@@ -46,6 +46,11 @@ const router = createRouter({
       ],
     },
     //榜单路由搭建结束
+    // 圈子路由搭建开始
+    {
+      path: "Circle",
+      component: () => import("../Circle/Circle.vue"),
+    },
   ],
 });
 
