@@ -40,6 +40,8 @@
         <li>
           <img src="./images/Slice 9.png" alt="" />
         </li>
+        <li></li>
+        <li></li>
       </ul>
     </div>
   </div>
