@@ -20,7 +20,7 @@ const router = createRouter({
     },
     {
       path: "/My",
-      component: () => import("../components/My.vue"),
+      component: () => import("../components/My/My.vue"),
     },
     //榜单路由搭建开始
     {
