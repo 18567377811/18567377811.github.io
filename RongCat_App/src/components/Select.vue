@@ -128,13 +128,13 @@
               <span>免费咨询</span>
             </div>
             <div class="huayue">
-              <img src="../selectImages/huayue1.png" alt="" />
-              <img src="../selectImages/huayue2.png" alt="" />
-              <img src="../selectImages/huayue3.png" alt="" />
+              <img src="./Select/selectImages/huayue1.png" alt="" />
+              <img src="./Select/selectImages/huayue2.png" alt="" />
+              <img src="./Select/selectImages/huayue3.png" alt="" />
             </div>
           </div>
           <div class="hos-item2">
-            <img src="../selectImages/beijinghuayue.png" alt="" />
+            <img src="./Select/selectImages/beijinghuayue.png" alt="" />
             <h3>北京华悦府医疗美容</h3>
             <span>0日记 | 250预约</span>
             <div class="span">
@@ -143,13 +143,13 @@
               <span>免费咨询</span>
             </div>
             <div class="huayue">
-              <img src="../selectImages/huayue1.png" alt="" />
-              <img src="../selectImages/huayue2.png" alt="" />
-              <img src="../selectImages/huayue3.png" alt="" />
+              <img src="./Select/selectImages/huayue1.png" alt="" />
+              <img src="./Select/selectImages/huayue2.png" alt="" />
+              <img src="./Select/selectImages/huayue3.png" alt="" />
             </div>
           </div>
           <div class="hos-item3">
-            <img src="../selectImages/beijinghuayue.png" alt="" />
+            <img src="./Select/selectImages/beijinghuayue.png" alt="" />
             <h3>北京华悦府医疗美容</h3>
             <span>0日记 | 250预约</span>
             <div class="span">
