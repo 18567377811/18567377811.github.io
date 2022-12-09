@@ -1,7 +1,7 @@
 <template>
   <div class="App">
     <router-view class="main"></router-view>
-    <van-tabbar v-model="active" fixed placeholder>
+    <van-tabbar v-model="active">
       <van-tabbar-item to="/">
         <template #icon="props">
           <img src="./images/Slice15.png" />
@@ -38,7 +38,8 @@ const active = ref(0);
 </script>
 
 <style lang="scss" scoped>
+
+</style>
 .main {
   flex: 1;
 }
-</style>
