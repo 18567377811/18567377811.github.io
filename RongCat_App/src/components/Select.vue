@@ -17,7 +17,7 @@
       </div>
       <div class="navspace"></div>
       <div class="items">
-        <swipe class="my-swipe" indicator-color="white">
+        <swipe class="my-swipe" :loop="false" indicator-color="white">
           <swipe-item>
             <div class="items">
               <div class="item">
@@ -84,9 +84,71 @@
           </swipe-item>
           <swipe-item>
             <div class="items">
-              <div class="item" v-for="item in 10">
-                <div class="img"></div>
-                <span>补水美白</span>
+              <div class="item">
+                <div class="img">
+                  <img
+                    src="./Select/selectImages/shoushujiaozheng.png"
+                    alt=""
+                  />
+                </div>
+                <span>手术矫正</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="./Select/selectImages/tuomao.png" alt="" />
+                </div>
+                <span>脱毛</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="./Select/selectImages/simizhengxing.png" alt="" />
+                </div>
+                <span>私密整形</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img
+                    src="./Select/selectImages/banyongjiuzhuang.png"
+                    alt=""
+                  />
+                </div>
+                <span>半永久妆</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="./Select/selectImages/kouqiangchike.png" alt="" />
+                </div>
+                <span>口腔齿科</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="./Select/selectImages/meibaibaoyang.png" alt="" />
+                </div>
+                <span>美白保养</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="./Select/selectImages/zhifayangfa.png" alt="" />
+                </div>
+                <span>植发养发</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="./Select/selectImages/shuiguangzhen.png" alt="" />
+                </div>
+                <span>水光针</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="./Select/selectImages/chunbuzhengxing.png" alt="" />
+                </div>
+                <span>唇部整形</span>
+              </div>
+              <div class="item">
+                <div class="img">
+                  <img src="./Select/selectImages/quanbuxiangmu.png" alt="" />
+                </div>
+                <span>全部项目</span>
               </div>
             </div>
           </swipe-item>
@@ -280,7 +342,7 @@ input {
 }
 .items {
   width: 350px;
-  height: 175px;
+  height: 190px;
   border-radius: 8px;
   background-color: #fff;
   margin: 16px auto;
@@ -289,8 +351,8 @@ input {
   align-items: center;
   justify-content: space-around;
   /* align-items: flex-start; */
-  padding-top: 6px;
-  padding-bottom: 20px;
+  padding-top: 8px;
+  padding-bottom: 24px;
   overflow: hidden;
 }
 .space {
@@ -305,6 +367,7 @@ input {
   background-color: antiquewhite;
 }
 .item {
+  width: 48px;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -319,7 +382,7 @@ input {
   border-radius: 10px;
   background-color: white;
   padding-top: 16px;
-  margin-top: -16px;
+  margin-top: -26px;
   height: 293px;
 }
 .lists h3 {
@@ -597,7 +660,7 @@ input {
     1px 0px 6px 0px rgba(0, 0, 0, 0.04), -1px 4px 6px 0px rgba(0, 0, 0, 0.04);
   border-radius: 8px 8px 8px 8px;
   opacity: 1;
-  margin: 0 16px auto;
+  margin: 16px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
