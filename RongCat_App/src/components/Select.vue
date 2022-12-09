@@ -4,7 +4,7 @@
       <!-- <h1>严选</h1> -->
       <div class="nav">
         <span class="city"
-          >{{ city }} <img src="../selectImages/city.png" alt=""
+          >{{ city }} <img src="./Select/selectImages/city.png" alt=""
         /></span>
         <div class="search">
           <div class="space"></div>
@@ -12,7 +12,7 @@
           <button></button>
         </div>
         <span class="notice"
-          ><img src="../selectImages/notice.png" alt=""
+          ><img src="./Select/selectImages/notice.png" alt=""
         /></span>
       </div>
       <div class="navspace"></div>
@@ -22,61 +22,61 @@
             <div class="items">
               <div class="item">
                 <div class="img">
-                  <img src="../selectImages/mianbulunkuo.png" alt="" />
+                  <img src="./Select/selectImages/mianbulunkuo.png" alt="" />
                 </div>
                 <span>面部轮廓</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../selectImages/bibu.png" alt="" />
+                  <img src="./Select/selectImages/bibu.png" alt="" />
                 </div>
                 <span>鼻部</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../selectImages/jinzhisuxing.png" alt="" />
+                  <img src="./Select/selectImages/jinzhisuxing.png" alt="" />
                 </div>
                 <span>紧致塑形</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../selectImages/poniaosuan.png" alt="" />
+                  <img src="./Select/selectImages/poniaosuan.png" alt="" />
                 </div>
                 <span>玻尿酸</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../selectImages/meitisuxing.png" alt="" />
+                  <img src="./Select/selectImages/meitisuxing.png" alt="" />
                 </div>
                 <span>美体塑形</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../selectImages/bushuimeibai.png" alt="" />
+                  <img src="./Select/selectImages/bushuimeibai.png" alt="" />
                 </div>
                 <span>补水美白</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../selectImages/xiongbu.png" alt="" />
+                  <img src="./Select/selectImages/xiongbu.png" alt="" />
                 </div>
                 <span>胸部</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../selectImages/chuzhoushoulian.png" alt="" />
+                  <img src="./Select/selectImages/chuzhoushoulian.png" alt="" />
                 </div>
                 <span>除皱瘦脸</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../selectImages/zitizhifang.png" alt="" />
+                  <img src="./Select/selectImages/zitizhifang.png" alt="" />
                 </div>
                 <span>自体脂肪</span>
               </div>
               <div class="item">
                 <div class="img">
-                  <img src="../selectImages/yanbu.png" alt="" />
+                  <img src="./Select/selectImages/yanbu.png" alt="" />
                 </div>
                 <span>眼部</span>
               </div>
@@ -110,7 +110,7 @@
             <dropdown-item v-model="value2" :options="option2" />
           </dropdown-menu>
           <div class="hos-item1">
-            <img src="../selectImages/beijinghuayue.png" alt="" />
+            <img src="./Select/selectImages/beijinghuayue.png" alt="" />
             <h3>北京华悦府医疗美容</h3>
             <span>0日记|250预约</span>
             <div class="span">
@@ -119,9 +119,9 @@
               <span>免费咨询</span>
             </div>
             <div class="huayue">
-              <img src="../selectImages/huayue1.png" alt="" />
-              <img src="../selectImages/huayue2.png" alt="" />
-              <img src="../selectImages/huayue3.png" alt="" />
+              <img src="./Select/selectImages/huayue1.png" alt="" />
+              <img src="./Select/selectImages/huayue2.png" alt="" />
+              <img src="./Select/selectImages/huayue3.png" alt="" />
             </div>
           </div>
           <div class="hos-item2"></div>
@@ -219,7 +219,7 @@ input {
   height: 30px;
 }
 .header {
-  background: url(../selectImages/slow.png) 100%;
+  background: url(./Select/selectImages/slow.png) 100%;
   background-size: auto 307px;
   height: 307px;
 }
@@ -232,7 +232,7 @@ input {
 }
 .search button {
   background-color: white;
-  background: url(../selectImages/search.png) no-repeat center;
+  background: url(./Select/selectImages/search.png) no-repeat center;
   background-size: 15px 15px;
   border: none;
   width: 14px;
@@ -298,7 +298,7 @@ input {
   overflow: hidden;
   /* margin-top: -6px; */
   background-color: aquamarine;
-  background: url(../selectImages/highlist.png) no-repeat;
+  background: url(./Select/selectImages/highlist.png) no-repeat;
   background-size: 350px 110px;
 }
 .flex {
@@ -315,19 +315,19 @@ input {
 .doctor {
   border-radius: 8px;
   overflow: hidden;
-  background: url(../selectImages/doctorlist.png) no-repeat;
+  background: url(./Select/selectImages/doctorlist.png) no-repeat;
   background-size: 110px 120px;
 }
 .oran {
   border-radius: 8px;
   overflow: hidden;
-  background: url(../selectImages/oran.png) no-repeat;
+  background: url(./Select/selectImages/oran.png) no-repeat;
   background-size: 110px 120px;
 }
 .choose {
   border-radius: 8px;
   overflow: hidden;
-  background: url(../selectImages/choose.png) no-repeat;
+  background: url(./Select/selectImages/choose.png) no-repeat;
   background-size: 110px 120px;
 }
 .my-swipe .van-swipe-item {
