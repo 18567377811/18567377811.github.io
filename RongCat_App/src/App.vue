@@ -1,7 +1,7 @@
 <template>
   <div class="App">
     <router-view class="main"></router-view>
-    <van-tabbar v-model="active" fixed placeholder>
+    <van-tabbar v-model="active">
       <van-tabbar-item to="/">
         <template #icon="props">
           <img src="./images/Slice15.png" />
@@ -12,7 +12,7 @@
           <img src="./images/Slice 16.png" />
         </template>严选
       </van-tabbar-item>
-      <van-tabbar-item to="/">
+      <van-tabbar-item to="/List">
         <template #icon="props">
           <img src="./images/Slice 17.png" />
         </template>榜单
@@ -38,7 +38,8 @@ const active = ref(0);
 </script>
 
 <style lang="scss" scoped>
+
+</style>
 .main {
   flex: 1;
 }
-</style>
