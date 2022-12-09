@@ -12,7 +12,7 @@
           <img src="./images/Slice 16.png" />
         </template>严选
       </van-tabbar-item>
-      <van-tabbar-item to="/">
+      <van-tabbar-item to="/List">
         <template #icon="props">
           <img src="./images/Slice 17.png" />
         </template>榜单
