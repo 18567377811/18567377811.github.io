@@ -28,7 +28,7 @@ const router = createRouter({
       children: [
         {
           path: '',
-          component: () => import("../components/List/List_Collect.vue"),
+          component: () => import("../components/List/List_collect.vue"),
         },
         {
           path: 'Popularity',
