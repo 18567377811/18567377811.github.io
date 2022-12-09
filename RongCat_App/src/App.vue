@@ -17,7 +17,7 @@
           <img src="./images/Slice 17.png" />
         </template>榜单
       </van-tabbar-item>
-      <van-tabbar-item to="/">
+      <van-tabbar-item to="/Circle">
         <template #icon="props">
           <img src="./images/Slice 18.png" />
         </template>圈子
