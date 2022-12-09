@@ -95,11 +95,20 @@
     </div>
     <div class="lists">
       <h3>品质榜单</h3>
-      <div class="highlist"></div>
+      <div class="highlist" @click="$router.push('/List')"></div>
       <div class="flex">
-        <div class="list doctor"></div>
-        <div class="list oran"></div>
-        <div class="list choose"></div>
+        <div
+          class="list doctor"
+          @click="$router.push('/List/GoodDoctor')"
+        ></div>
+        <div
+          class="list oran"
+          @click="$router.push('/List/Organization')"
+        ></div>
+        <div
+          class="list choose"
+          @click="$router.push('/List/Popularity')"
+        ></div>
       </div>
     </div>
     <div class="tab">
@@ -112,7 +121,7 @@
           <div class="hos-item1">
             <img src="../selectImages/beijinghuayue.png" alt="" />
             <h3>北京华悦府医疗美容</h3>
-            <span>0日记|250预约</span>
+            <span>0日记 | 250预约</span>
             <div class="span">
               <span>认证</span>
               <span>可分期</span>
@@ -124,8 +133,36 @@
               <img src="../selectImages/huayue3.png" alt="" />
             </div>
           </div>
-          <div class="hos-item2"></div>
-          <div class="hos-item3"></div>
+          <div class="hos-item2">
+            <img src="../selectImages/beijinghuayue.png" alt="" />
+            <h3>北京华悦府医疗美容</h3>
+            <span>0日记 | 250预约</span>
+            <div class="span">
+              <span>认证</span>
+              <span>可分期</span>
+              <span>免费咨询</span>
+            </div>
+            <div class="huayue">
+              <img src="../selectImages/huayue1.png" alt="" />
+              <img src="../selectImages/huayue2.png" alt="" />
+              <img src="../selectImages/huayue3.png" alt="" />
+            </div>
+          </div>
+          <div class="hos-item3">
+            <img src="../selectImages/beijinghuayue.png" alt="" />
+            <h3>北京华悦府医疗美容</h3>
+            <span>0日记 | 250预约</span>
+            <div class="span">
+              <span>认证</span>
+              <span>可分期</span>
+              <span>免费咨询</span>
+            </div>
+            <div class="huayue">
+              <img src="../selectImages/huayue1.png" alt="" />
+              <img src="../selectImages/huayue2.png" alt="" />
+              <img src="../selectImages/huayue3.png" alt="" />
+            </div>
+          </div>
         </tab>
         <tab title="商品">
           <dropdown-menu>
@@ -173,7 +210,9 @@ const option2 = [
 }
 .select {
   background-color: #fafafa;
-  height: 2000px;
+  /* height: 2000px; */
+  /* flex: 1;
+  overflow: auto; */
 }
 .nav {
   background-color: #9bf3f9;
@@ -191,10 +230,11 @@ const option2 = [
   align-items: center;
   margin-left: -20px;
   margin-right: 10px;
+  font-size: 14px;
 }
 .city img {
-  width: 6px;
-  height: 4px;
+  width: 8px;
+  height: 6px;
 }
 .notice {
   display: flex;
@@ -221,7 +261,7 @@ input {
 .header {
   background: url(../selectImages/slow.png) 100%;
   background-size: auto 307px;
-  height: 307px;
+  height: 297px;
 }
 .search {
   display: flex;
@@ -246,9 +286,11 @@ input {
   margin: 16px auto;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: space-around;
   /* align-items: flex-start; */
-  padding-top: 10px;
+  padding-top: 6px;
+  padding-bottom: 20px;
   overflow: hidden;
 }
 .space {
@@ -268,7 +310,7 @@ input {
   /* justify-content: center; */
   align-items: center;
   height: 70px;
-  font-size: 10px;
+  font-size: 12px;
   margin: 0 10px;
   /* margin-bottom: 10px; */
   line-height: 22px;
@@ -369,7 +411,41 @@ input {
   margin-top: 16px;
   margin-bottom: 13px;
 }
+.hos-item2 img {
+  width: 60px;
+  height: 60px;
+  margin-top: 16px;
+  margin-bottom: 13px;
+}
+.hos-item3 img {
+  width: 60px;
+  height: 60px;
+  margin-top: 16px;
+  margin-bottom: 13px;
+}
 .hos-item1 h3 {
+  width: 144px;
+  height: 22px;
+  font-size: 16px;
+  font-family: PingFang SC-Bold, PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  line-height: 22px;
+  /* -webkit-background-clip: text;
+-webkit-text-fill-color: transparent; */
+}
+.hos-item2 h3 {
+  width: 144px;
+  height: 22px;
+  font-size: 16px;
+  font-family: PingFang SC-Bold, PingFang SC;
+  font-weight: bold;
+  color: #333333;
+  line-height: 22px;
+  /* -webkit-background-clip: text;
+-webkit-text-fill-color: transparent; */
+}
+.hos-item3 h3 {
   width: 144px;
   height: 22px;
   font-size: 16px;
@@ -391,10 +467,69 @@ input {
   /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
+.hos-item2 span {
+  /* width: 40px; */
+  height: 10px;
+  font-size: 11px;
+  font-family: DIN-Regular, DIN;
+  font-weight: 400;
+  color: #72727a;
+  line-height: 22px;
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+.hos-item3 span {
+  /* width: 40px; */
+  height: 10px;
+  font-size: 11px;
+  font-family: DIN-Regular, DIN;
+  font-weight: 400;
+  color: #72727a;
+  line-height: 22px;
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
 .span {
   display: flex;
 }
 .hos-item1 .span span {
+  display: block;
+  background: linear-gradient(176deg, #6efff6 0%, #5ee2f3 50%, #1ab3f5 92%);
+  box-shadow: 0px 2px 4px 0px rgba(30, 185, 204, 0.3);
+  border-radius: 6px 6px 6px 6px;
+  /* width: 21px; */
+  height: 16px;
+  font-size: 10px;
+  font-family: PingFang SC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 16px;
+  margin: 11px 6px;
+  padding: 0 8px;
+  text-align: center;
+
+  opacity: 1;
+}
+.hos-item2 .span span {
+  display: block;
+  background: linear-gradient(176deg, #6efff6 0%, #5ee2f3 50%, #1ab3f5 92%);
+  box-shadow: 0px 2px 4px 0px rgba(30, 185, 204, 0.3);
+  border-radius: 6px 6px 6px 6px;
+  /* width: 21px; */
+  height: 16px;
+  font-size: 10px;
+  font-family: PingFang SC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 16px;
+  margin: 11px 6px;
+  padding: 0 8px;
+  text-align: center;
+
+  opacity: 1;
+}
+.hos-item3 .span span {
   display: block;
   background: linear-gradient(176deg, #6efff6 0%, #5ee2f3 50%, #1ab3f5 92%);
   box-shadow: 0px 2px 4px 0px rgba(30, 185, 204, 0.3);
@@ -417,7 +552,18 @@ input {
 }
 .hos-item1 .huayue img {
   width: 95px;
-  height: 73px;
+  height: 95px;
+  margin: 0 4px;
+}
+.hos-item2 .huayue img {
+  width: 95px;
+  height: 95px;
+  margin: 0 4px;
+}
+.hos-item3 .huayue img {
+  width: 95px;
+  height: 95px;
+  margin: 0 4px;
 }
 .hos-item2 {
   width: 349px;
@@ -434,6 +580,9 @@ input {
   border-radius: 8px 8px 8px 8px;
   opacity: 1;
   margin: 16px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .hos-item3 {
   width: 349px;
@@ -449,5 +598,8 @@ input {
   border-radius: 8px 8px 8px 8px;
   opacity: 1;
   margin: 0 16px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>

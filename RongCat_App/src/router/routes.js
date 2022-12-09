@@ -5,12 +5,13 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {
-      path: '/',
+      path: "/",
       component: () => import("../components/Home.vue"),
-      children: [{
-        path: '/Recmd',
-        component: () => import('../components/Home/Recmd.vue')
-      }
+      children: [
+        {
+          path: "/Recmd",
+          component: () => import("../components/Home/Recmd.vue"),
+        },
       ],
     },
     {
@@ -19,7 +20,7 @@ const router = createRouter({
     },
     {
       path: "/My",
-      component: () => import("../components/My.vue"),
+      component: () => import("../components/My/My.vue"),
     },
     //榜单路由搭建开始
     {
@@ -27,24 +28,29 @@ const router = createRouter({
       component: () => import("../components/List.vue"),
       children: [
         {
-          path: '',
+          path: "",
           component: () => import("../components/List/List_collect.vue"),
         },
         {
-          path: 'Popularity',
+          path: "Popularity",
           component: () => import("../components/List/List_Popularity.vue"),
         },
         {
-          path: 'Organization',
+          path: "Organization",
           component: () => import("../components/List/List_Organization.vue"),
         },
         {
-          path: 'GoodDoctor',
+          path: "GoodDoctor",
           component: () => import("../components/List/List_GoodDoctor.vue"),
-        }
-      ]
-    }
+        },
+      ],
+    },
     //榜单路由搭建结束
+    // 圈子路由搭建开始
+    {
+      path: "/Circle",
+      component: () => import("../Circle/Circle.vue"),
+    },
   ],
 });
 

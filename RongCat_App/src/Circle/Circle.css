@@ -1,0 +1,38 @@
+*{
+  margin:0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+/* Nav */
+.Circle_Nav{
+  margin-top: 21px;
+  display: flex;
+  height: 44px;
+  width: 100%;
+  justify-content: space-between;
+}
+.Circle_Nav_title{
+  display: flex;
+  justify-content:space-around;
+  width:100%;
+}
+.Circle_Nav_title li{
+  height: 22px;
+  line-height: 100%;
+  font-size: 22px;
+}
+.Circle_Nav_plus{
+  height: 22px;
+  width: 22px;
+  
+  line-height: 22px;
+  margin-right: 13px;
+}
+.Circle_Nav_plus img{
+  text-align: center;
+height: 13px;
+  width: 13px;
+}
+
