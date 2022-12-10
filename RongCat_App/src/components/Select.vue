@@ -196,7 +196,7 @@
             </div>
           </div>
           <div class="hos-item2">
-            <img src="./Select/selectImages/beijinghuayue.png" alt="" />
+            <img src="./Select/selectImages/beijinglaimei.png" alt="" />
             <h3>北京华悦府医疗美容</h3>
             <span>0日记 | 250预约</span>
             <div class="span">
@@ -205,13 +205,13 @@
               <span>免费咨询</span>
             </div>
             <div class="huayue">
-              <img src="./Select/selectImages/huayue1.png" alt="" />
-              <img src="./Select/selectImages/huayue2.png" alt="" />
-              <img src="./Select/selectImages/huayue3.png" alt="" />
+              <img src="./Select/selectImages/laimei1.png" alt="" />
+              <img src="./Select/selectImages/laimei2.png" alt="" />
+              <img src="./Select/selectImages/laimei3.png" alt="" />
             </div>
           </div>
           <div class="hos-item3">
-            <img src="./Select/selectImages/beijinghuayue.png" alt="" />
+            <img src="./Select/selectImages/beijingweilin.png" alt="" />
             <h3>北京华悦府医疗美容</h3>
             <span>0日记 | 250预约</span>
             <div class="span">
@@ -220,9 +220,9 @@
               <span>免费咨询</span>
             </div>
             <div class="huayue">
-              <img src="./Select/selectImages/huayue1.png" alt="" />
-              <img src="./Select/selectImages/huayue2.png" alt="" />
-              <img src="./Select/selectImages/huayue3.png" alt="" />
+              <img src="./Select/selectImages/weilin1.png" alt="" />
+              <img src="./Select/selectImages/weilin2.png" alt="" />
+              <img src="./Select/selectImages/weilin3.png" alt="" />
             </div>
           </div>
         </tab>
@@ -452,12 +452,14 @@ input {
 .hos-item1 {
   width: 349px;
   height: 272px;
-  background: linear-gradient(
-    180deg,
-    rgba(255, 239, 221, 0.88) 0%,
-    #fefdf9 43%,
-    #ffffff 84%
-  );
+  background: url(./Select/selectImages/hos-item1.png)
+    /* linear-gradient(
+      180deg,
+      rgba(255, 239, 221, 0.88) 0%,
+      #fefdf9 43%,
+      #ffffff 84%
+    ); */;
+  background-size: 349px 272px;
   box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.04),
     1px 0px 6px 0px rgba(0, 0, 0, 0.04), -1px 4px 6px 0px rgba(0, 0, 0, 0.04);
   border-radius: 8px 8px 8px 8px;
@@ -631,13 +633,8 @@ input {
 .hos-item2 {
   width: 349px;
   height: 272px;
-  background: linear-gradient(
-    180deg,
-    rgba(245, 233, 251, 0.83) 0%,
-    #f9fcfe 43%,
-    #ffffff 84%,
-    #ffffff 100%
-  );
+  background: url(./Select/selectImages/hos-item2.png);
+  background-size: 349px 272px;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.04),
     1px 0px 4px 0px rgba(0, 0, 0, 0.02), -1px 4px 4px 0px rgba(0, 0, 0, 0.04);
   border-radius: 8px 8px 8px 8px;
@@ -650,17 +647,20 @@ input {
 .hos-item3 {
   width: 349px;
   height: 273px;
-  background: linear-gradient(
-    180deg,
-    rgba(253, 239, 239, 0.83) 0%,
-    #fefaf9 43%,
-    #ffffff 84%
-  );
+  background: url(./Select/selectImages/hos-item3.png)
+    /* linear-gradient(
+      180deg,
+      rgba(253, 239, 239, 0.83) 0%,
+      #fefaf9 43%,
+      #ffffff 84%
+    ) */;
+  background-size: 349px 272px;
   box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.04),
     1px 0px 6px 0px rgba(0, 0, 0, 0.04), -1px 4px 6px 0px rgba(0, 0, 0, 0.04);
   border-radius: 8px 8px 8px 8px;
   opacity: 1;
   margin: 16px auto;
+  margin-bottom: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
